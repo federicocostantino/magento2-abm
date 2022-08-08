@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="dev_grid_company_listing_data_source" xsi:type="string">Dev\Grid\Model\ResourceModel\Company\Grid\Collection</item>
+                <item name="dev_grid_company_form_data_source" xsi:type="string">Dev\Grid\Model\ResourceModel\Company\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="routingExample" xsi:type="array">
+                    <item name="class" xsi:type="string">Dev\Grid\Controller\Adminhtml\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">40</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType 
+        name="Dev\Grid\Model\ResourceModel\Company\Grid\Collection" 
+        type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult"
+    >
+        <arguments>
+            <argument name="mainTable" xsi:type="string">company</argument>
+            <argument name="resourceModel" xsi:type="string">Dev\Grid\Model\ResourceModel\Company</argument>
+        </arguments>
+    </virtualType>
+</config>

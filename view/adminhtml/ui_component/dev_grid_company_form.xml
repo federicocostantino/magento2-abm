@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">dev_grid_company_form.dev_grid_company_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Add a Employee Form</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+
+    <settings>
+        <buttons>
+            <button name="back" class="Dev\Grid\Block\Adminhtml\Company\Edit\BackButton"/>
+            <button name="save" class="Dev\Grid\Block\Adminhtml\Company\Edit\SaveButton"/>
+        </buttons>
+        <namespace>dev_grid_company_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>dev_grid_company_form.dev_grid_company_form_data_source</dep>
+        </deps>
+    </settings>
+
+    <dataSource name="dev_grid_company_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider name="dev_grid_company_form_data_source" class="Dev\Grid\Model\Company\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+
+    <fieldset name="general">
+        <settings>
+            <label>General</label>
+        </settings>
+
+        <field name="first_name" formElement="input" sortOrder="12">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">First Name</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">First Name</label>
+                <dataScope>first_name</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+
+        <field name="last_name" formElement="input" sortOrder="13">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">Last Name</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Last Name</label>
+                <dataScope>last_name</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+
+        <field name="age" formElement="input" sortOrder="14">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">Age</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Age</label>
+                <dataScope>age</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+
+        <field name="type" component="Dev_Grid/js/option" formElement="select">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Type</label>
+                <dataScope>type</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="programeer" xsi:type="array">
+                                <item name="value" xsi:type="string">Programeer</item>
+                                <item name="label" xsi:type="string">Programmer</item>
+                            </option>
+                            <option name="designer" xsi:type="array">
+                                <item name="value" xsi:type="string">Designer</item>
+                                <item name="label" xsi:type="string">Designer</item>
+                            </option>
+                        </options>
+                        <caption translate="true">Select type</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+
+        <field name="language" formElement="select">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Language</label>
+                <dataScope>language</dataScope>
+                <visible>false</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">PHP</item>
+                                <item name="label" xsi:type="string">PHP</item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="value" xsi:type="string">.NET</item>
+                                <item name="label" xsi:type="string">.NET</item>
+                            </option>
+                        </options>
+                        <caption translate="true">-- Select language --</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+
+        <field name="designer" formElement="select">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Designer</label>
+                <dataScope>designer</dataScope>
+                <visible>false</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">Web</item>
+                                <item name="label" xsi:type="string">Web</item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="value" xsi:type="string">Interiores</item>
+                                <item name="label" xsi:type="string">Interiores</item>
+                            </option>
+                        </options>
+                        <caption translate="true">-- Select designer --</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

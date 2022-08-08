@@ -1,0 +1,23 @@
+{
+    "company": {
+        "column": {
+            "id": true,
+            "first_name": true,
+            "last_name": true,
+            "age": true,
+            "type": true,
+            "language": true,
+            "designer": true
+        },
+        "index": {
+            "COMPANY_FIRST_NAME": true,
+            "COMPANY_LAST_NAME": true,
+            "COMPANY_TYPE": true,
+            "COMPANY_LANGUAGE": true,
+            "COMPANY_DESIGNER": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
