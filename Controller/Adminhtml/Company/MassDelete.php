@@ -9,7 +9,7 @@ use Magento\Ui\Component\MassAction\Filter;
 use Magento\Backend\App\Action;
 use Dev\Grid\Model\ResourceModel\Company\Grid\CollectionFactory;
 
-class MassDelete extends Action
+class MassDelete extends Action implements \Magento\Framework\App\Action\HttpPostActionInterface
 {
     /**
     * @var Filter

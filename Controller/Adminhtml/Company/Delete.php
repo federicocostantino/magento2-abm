@@ -8,7 +8,7 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Action\Action;
 use Dev\Grid\Model\ResourceModel\Company\Grid\CollectionFactory;
 
-class Delete extends Action
+class Delete extends Action implements \Magento\Framework\App\Action\HttpPostActionInterface
 {
     protected $resultPageFactory;
     protected $extensionFactory;

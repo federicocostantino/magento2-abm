@@ -7,7 +7,7 @@ use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\ForwardFactory;
 
-class NewAction extends Action
+class NewAction extends Action implements \Magento\Framework\App\Action\HttpPostActionInterface
 {
     protected $resultForwardFactory;
     

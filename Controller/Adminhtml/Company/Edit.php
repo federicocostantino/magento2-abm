@@ -8,7 +8,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 
-class Edit extends Action
+class Edit extends Action implements \Magento\Framework\App\Action\HttpPostActionInterface
 {
     protected $resultPageFactory;
 
