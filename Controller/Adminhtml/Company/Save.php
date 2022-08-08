@@ -6,7 +6,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 
-class Save extends \Magento\Backend\App\Action
+class Save extends \Magento\Backend\App\Action implements \Magento\Framework\App\Action\HttpPostActionInterface
 {
     protected $dataPersistor;
 
