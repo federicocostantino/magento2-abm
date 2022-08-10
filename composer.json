@@ -8,8 +8,8 @@
             "email": "federicohoracio.costantino@nttdata.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
+        "fcostantino/grid": "dev-master@dev",
         "php": ">=7.4.3",
         "magento/framework": "*"
     },
