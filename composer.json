@@ -8,7 +8,6 @@
             "email": "federicohoracio.costantino@nttdata.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.3",
         "magento/framework": "*"
@@ -19,10 +18,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Dev\\Grid\\": "src/"
-        },
-        "files": [
-            "registration.php"
-        ]
-    }
+            "Dev\\Grid\\": "./src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
