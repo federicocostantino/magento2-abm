@@ -2,6 +2,7 @@
     "name": "fcostantino/grid",
     "description": "Dev Grid Module",
     "type": "magento2-module",
+    "version": "1.0.6",
     "authors": [
         {
             "name": "Federico Costantino",
